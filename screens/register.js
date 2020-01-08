@@ -22,6 +22,7 @@ export default class register extends React.Component {
            no_radio:false,
             fsPath: '',
             checked: false,
+            value: null,
 
         };
     }
@@ -63,9 +64,9 @@ export default class register extends React.Component {
     render() {
 
         const items = [
-            { name: 'Réseau', code: require("../assets/network.png") }, { name: 'PC-Windows', code: require("../assets/windows.png") },
-            { name: 'Imprimante', code: require("../assets/printer.png") }, { name: 'Internet', code: require("../assets/wifi.png") },
-            { name: 'Virus', code: require("../assets/warning.png") }, { name: 'Réseau', code: require("../assets/network.png") },
+            {id:1, name: 'Réseau', code: require("../assets/network.png") }, {id:2, name: 'PC-Windows', code: require("../assets/windows.png") },
+            {id:3, name: 'Imprimante', code: require("../assets/printer.png") }, {id:4, name: 'Internet', code: require("../assets/wifi.png") },
+            {id:5, name: 'Virus', code: require("../assets/warning.png") }, {id:6, name: 'Réseau', code: require("../assets/network.png") },
            
         ];
         return (
@@ -216,7 +217,7 @@ export default class register extends React.Component {
                                     // spacing={20}
                                     renderItem={({ item, index }) => (
                                         <View>
-                                            <View style={[{
+                                            <TouchableOpacity onPress={() => this.setState({ value: item.id })} style={[{
                                                 justifyContent: 'center', alignItems: 'center',
                                                 borderRadius: 5,
                                                 flexDirection: 'row',
@@ -227,9 +228,9 @@ export default class register extends React.Component {
                                             }, { backgroundColor: 'white' }]}>
 
                                                 <View style={{ width: '20%', height: 50, justifyContent:'center' }}>
-                                                <TouchableOpacity onPress={() => this.setState({ Particulier_radio: true, Entreprise_radio: false, Clienten_radio: false })} style={{ width: '20%', height: 30, alignItems: 'center', justifyContent: 'center' }}>
+                                                <TouchableOpacity onPress={() => this.setState({ value: item.id })} style={{ width: '20%', height: 30, alignItems: 'center', justifyContent: 'center' }}>
                                             <View style={{ width: 20, height: 20, borderWidth: 2, borderRadius: 20 / 2, alignItems: 'center', justifyContent: 'center', borderColor: Strings.light_color }}>
-                                                {this.state.Particulier_radio === true && (<View style={{ width: 16, height: 16, borderRadius: 16 / 2, backgroundColor: '#01A2C4', alignItems: 'center', justifyContent: 'center' }}>
+                                                {this.state.value === item.id && (<View style={{ width: 16, height: 16, borderRadius: 16 / 2, backgroundColor: '#01A2C4', alignItems: 'center', justifyContent: 'center' }}>
                                                     <Image source={require("../assets/right.png")}
                                                         style={{ width: 10, height: 10, }}
                                                         resizeMode="contain" />
@@ -247,7 +248,7 @@ export default class register extends React.Component {
 
                                                 </View>
                                                
-                                            </View>
+                                            </TouchableOpacity>
                                         </View>
                                     )}
                                 />
@@ -289,6 +290,25 @@ export default class register extends React.Component {
                                             <Text>{"Non"}</Text>
                                         </View>
                                     </View>
+                                </View>
+
+
+                            </View>
+
+                            <View style={{ marginTop: 20 }}>
+                                <Text style={{ fontSize: 14, fontWeight: 'bold' }}>
+                                    {Strings.reference_no_text}
+                                </Text>
+                                <View style={{ flexDirection: 'row', marginTop: 10 }}>
+                                    
+                                <View style={{ width: '100%', height: 45, marginTop: 10, borderWidth: 1, borderColor: Strings.light_color, borderRadius: 10 }}>
+                                <TextInput placeholder={"#9875656"}
+                                  
+                                    style={{ padding: 10 }}>
+
+                                </TextInput>
+                            </View>
+
                                 </View>
 
 

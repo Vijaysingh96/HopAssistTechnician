@@ -11,12 +11,19 @@
   },
   "dependencies": {
     "@react-native-community/viewpager": "^3.3.0",
+    "native-base": "^2.13.8",
     "react": "16.9.0",
     "react-native": "0.61.5",
     "react-native-best-viewpager": "^1.0.1",
+    "react-native-echarts-wrapper": "^2.0.0",
+    "react-native-elements": "^1.2.7",
     "react-native-image-picker": "^1.1.0",
+    "react-native-material-dropdown": "^0.11.1",
+    "react-native-raw-bottom-sheet": "^2.0.6",
     "react-native-router-flux": "^4.0.6",
-    "react-native-super-grid": "^3.1.2"
+    "react-native-super-grid": "^3.1.2",
+    "react-native-webview": "^8.0.2",
+    "react-native-whc-loading": "^1.0.3"
   },
   "devDependencies": {
     "@babel/core": "7.7.7",

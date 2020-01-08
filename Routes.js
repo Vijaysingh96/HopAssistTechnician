@@ -7,9 +7,17 @@ import ViewPager from './screens/viewPager'
 import SignUp from './screens/signUp'
 import Login from './screens/login'
 import Register from './screens/register'
-
- 
-
+import Home from './screens/Home'
+import NewIntervention from './screens/NewIntervention'
+import WorkEstimation from './screens/WorkEstimation'
+import Rating from './screens/Rating'
+import History from './screens/historys'
+import InterventionDetails from './screens/interventionDetails'
+import Profile from './screens/Profile'
+import EditProfile from './screens/EditProfile'
+import Contacts from './screens/Contacts'
+import Notification from './screens/Notification'
+import Category from './screens/Category'
 _backAndroidHandler = () => {
   const scene = Actions.currentScene;
   // alert(scene)
@@ -34,8 +42,17 @@ const Routes = () => (
     <Scene key="SignUp" component={SignUp} left={()=>null} hideNavBar />
     <Scene key="Login" component={Login} left={() => null} hideNavBar />
     <Scene key="Register" component={Register} left={() => null} hideNavBar />
-     
-     
+    <Scene key="Home" component={Home} left={() => null} hideNavBar />
+    <Scene key="NewIntervention" component={NewIntervention} left={() => null} hideNavBar /> 
+     <Scene key="WorkEstimation" component={WorkEstimation} left={() => null} hideNavBar /> 
+     <Scene key="Rating" component={Rating} left={() => null} hideNavBar /> 
+     <Scene key="History" component={History} left={() => null} hideNavBar /> 
+     <Scene key="InterventionDetails" component={InterventionDetails} left={() => null} hideNavBar /> 
+     <Scene key="Profile" component={Profile} left={() => null} hideNavBar /> 
+     <Scene key="EditProfile" component={EditProfile} left={() => null} hideNavBar />
+     <Scene key="Contacts" component={Contacts} left={() => null} hideNavBar />
+     <Scene key="Notification" component={Notification} left={() => null} hideNavBar />
+     <Scene key="Category" component={Category} left={() => null} hideNavBar />
       
     </Stack>
   </Router>

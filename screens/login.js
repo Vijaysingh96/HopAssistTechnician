@@ -59,7 +59,7 @@ export default class login extends React.Component {
 
                         </View>
                         
-                        <TouchableOpacity onPress={()=> Actions.push("Location")} style={{ alignItems: 'center', justifyContent: 'center', width: '90%', height: 50, marginTop: 30, borderRadius: 10, backgroundColor: '#01A2C4' }}>
+                        <TouchableOpacity onPress={()=> Actions.push("Home")} style={{ alignItems: 'center', justifyContent: 'center', width: '90%', height: 50, marginTop: 30, borderRadius: 10, backgroundColor: '#01A2C4' }}>
                             <Text style={{ fontSize: 16, color: 'white' }}>{Strings.email_login_text}</Text>
 
                         </TouchableOpacity>

@@ -46,7 +46,7 @@ export default class signUp extends React.Component {
                         <TouchableOpacity onPress={() => Actions.push("Login")} style={{ alignItems: 'center', justifyContent: 'center', width: '90%', height: 50, marginTop: 40, borderRadius: 10, backgroundColor: '#01A2C4' }}>
                             <Text style={{ fontSize: 16, color: 'white' }}>{Strings.mobile_login_text}</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => Actions.push("CreateReservations")} style={{ alignItems: 'center', justifyContent: 'center', width: '90%', height: 50, marginTop: 30, borderRadius: 10, backgroundColor: '#01A2C4' }}>
+                        <TouchableOpacity onPress={() => Actions.push("Rating")} style={{ alignItems: 'center', justifyContent: 'center', width: '90%', height: 50, marginTop: 30, borderRadius: 10, backgroundColor: '#01A2C4' }}>
                             <Text style={{ fontSize: 16, color: 'white' }}>{Strings.email_login_text}</Text>
 
                         </TouchableOpacity>

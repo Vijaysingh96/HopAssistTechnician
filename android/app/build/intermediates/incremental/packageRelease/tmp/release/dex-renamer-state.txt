@@ -1,0 +1,4 @@
+#Mon Jan 06 19:58:42 IST 2020
+base.0=/home/groofl/VijaySingh/HopAssistTechnician/android/app/build/intermediates/transforms/dexMerger/release/0
+renamed.0=classes.dex
+path.0=classes.dex

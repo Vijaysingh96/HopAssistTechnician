@@ -7,6 +7,7 @@ INJECTED from /home/groofl/VijaySingh/HopAssistTechnician/android/app/src/main/A
 MERGED from /home/groofl/VijaySingh/HopAssistTechnician/android/app/src/main/AndroidManifest.xml:1:1-31:12
 MERGED from [:@react-native-community_viewpager] /home/groofl/VijaySingh/HopAssistTechnician/node_modules/@react-native-community/viewpager/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-image-picker] /home/groofl/VijaySingh/HopAssistTechnician/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-21:12
+MERGED from [:react-native-webview] /home/groofl/VijaySingh/HopAssistTechnician/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-23:12
 MERGED from [com.facebook.react:react-native:0.61.5] /root/.gradle/caches/transforms-2/files-2.1/144c068f80b5c8774a6db6319a225511/AndroidManifest.xml:2:1-13:12
 MERGED from [org.webkit:android-jsc:r245459] /root/.gradle/caches/transforms-2/files-2.1/e32e661cf5a0cab2ac28c8c61d81482f/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.0.2] /root/.gradle/caches/transforms-2/files-2.1/bc816d32c364ca1772d4256419cc7383/AndroidManifest.xml:17:1-22:12
@@ -86,6 +87,8 @@ MERGED from /home/groofl/VijaySingh/HopAssistTechnician/android/app/src/main/And
 MERGED from /home/groofl/VijaySingh/HopAssistTechnician/android/app/src/main/AndroidManifest.xml:11:5-29:19
 MERGED from [:react-native-image-picker] /home/groofl/VijaySingh/HopAssistTechnician/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-19:19
 MERGED from [:react-native-image-picker] /home/groofl/VijaySingh/HopAssistTechnician/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-19:19
+MERGED from [:react-native-webview] /home/groofl/VijaySingh/HopAssistTechnician/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
+MERGED from [:react-native-webview] /home/groofl/VijaySingh/HopAssistTechnician/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
 MERGED from [com.facebook.react:react-native:0.61.5] /root/.gradle/caches/transforms-2/files-2.1/144c068f80b5c8774a6db6319a225511/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.react:react-native:0.61.5] /root/.gradle/caches/transforms-2/files-2.1/144c068f80b5c8774a6db6319a225511/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.6.0] /root/.gradle/caches/transforms-2/files-2.1/710dc9ac5d03859489d034fe92f42eff/AndroidManifest.xml:11:5-20
@@ -152,6 +155,8 @@ MERGED from [:@react-native-community_viewpager] /home/groofl/VijaySingh/HopAssi
 MERGED from [:@react-native-community_viewpager] /home/groofl/VijaySingh/HopAssistTechnician/node_modules/@react-native-community/viewpager/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-image-picker] /home/groofl/VijaySingh/HopAssistTechnician/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-image-picker] /home/groofl/VijaySingh/HopAssistTechnician/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-webview] /home/groofl/VijaySingh/HopAssistTechnician/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-webview] /home/groofl/VijaySingh/HopAssistTechnician/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.61.5] /root/.gradle/caches/transforms-2/files-2.1/144c068f80b5c8774a6db6319a225511/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.61.5] /root/.gradle/caches/transforms-2/files-2.1/144c068f80b5c8774a6db6319a225511/AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r245459] /root/.gradle/caches/transforms-2/files-2.1/e32e661cf5a0cab2ac28c8c61d81482f/AndroidManifest.xml:7:5-9:41
@@ -254,3 +259,13 @@ ADDED from [:react-native-image-picker] /home/groofl/VijaySingh/HopAssistTechnic
 		ADDED from [:react-native-image-picker] /home/groofl/VijaySingh/HopAssistTechnician/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-55
 	android:name
 		ADDED from [:react-native-image-picker] /home/groofl/VijaySingh/HopAssistTechnician/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:17-67
+provider#com.reactnativecommunity.webview.RNCWebViewFileProvider
+ADDED from [:react-native-webview] /home/groofl/VijaySingh/HopAssistTechnician/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-20:20
+	android:grantUriPermissions
+		ADDED from [:react-native-webview] /home/groofl/VijaySingh/HopAssistTechnician/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-47
+	android:authorities
+		ADDED from [:react-native-webview] /home/groofl/VijaySingh/HopAssistTechnician/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-64
+	android:exported
+		ADDED from [:react-native-webview] /home/groofl/VijaySingh/HopAssistTechnician/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-37
+	android:name
+		ADDED from [:react-native-webview] /home/groofl/VijaySingh/HopAssistTechnician/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-83

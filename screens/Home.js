@@ -6,7 +6,7 @@ import {
 import { Actions } from 'react-native-router-flux';
 import Styles from '../styles/styles';
 import Strings from '../strings/strings';
-import { ECharts } from 'react-native-echarts-wrapper';
+import { ECharts} from 'react-native-echarts-wrapper';
 const { width, height } = Dimensions.get("window");
 import { Icon, Picker, Form } from "native-base";
 import OfflineRBSheet from "react-native-raw-bottom-sheet";
@@ -144,7 +144,7 @@ export default class Home extends React.Component {
                             <TouchableOpacity onPress ={()=>Actions.push("WorkEstimation")} style={{ width: 100, height: 30, backgroundColor: Strings.color_green_code, borderRadius: 50, marginLeft: 10, justifyContent: 'center', alignItems: 'center' }}>
                                 <Text style={{ color: 'white', fontWeight: 'bold' }}>{Strings.Mensuel_text}</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity style={{ width: 120, height: 30, backgroundColor: Strings.color_green_code, borderRadius: 50, marginLeft: 10, justifyContent: 'center', alignItems: 'center' }}>
+                            <TouchableOpacity  style={{ width: 120, height: 30, backgroundColor: Strings.color_green_code, borderRadius: 50, marginLeft: 10, justifyContent: 'center', alignItems: 'center' }}>
                                 <Text style={{ color: 'white', fontWeight: 'bold' }}>{Strings.Hebdomadaire_text}</Text>
                             </TouchableOpacity>
                         </View>

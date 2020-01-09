@@ -1,6 +1,7 @@
 import { AsyncStorage, Platform, Alert } from 'react-native';
 import { Actions, Router, Stack, Scene } from 'react-native-router-flux';
 import React from 'react';
+import Styles from './styles/styles';
 import { BackHandler } from 'react-native'
 import Splash from './screens/splash'
 import ViewPager from './screens/viewPager'
@@ -21,10 +22,21 @@ import Category from './screens/Category'
 _backAndroidHandler = () => {
   const scene = Actions.currentScene;
   // alert(scene)
+  console.log("backEvent test "+scene);
   if (scene === 'Tabs' || scene === 'Home') {
-    AsyncStorage.setItem("backEvent", "" + true);
-    // console.log("backEvent test "+backEvent);
-    BackHandler.exitApp();
+   
+    Alert.alert(
+      'Quitter l\'application',
+      'Voulez-vous sortir?',
+      [
+        {text: 'Non', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+        {text: 'Oui', onPress: () => BackHandler.exitApp()},
+      ],
+      { cancelable: false });
+    // AsyncStorage.setItem("backEvent", "" + true);
+    //   alert(scene)
+    // // console.log("backEvent test "+backEvent);
+    // BackHandler.exitApp();
     return true;
   }
   Actions.pop();

@@ -1,21 +1,35 @@
-import React from 'react';
-import {Platform,
-  SafeAreaView, StatusBar, View,ImageBackground, Text, Image, Dimensions, TouchableOpacity, Linking, AsyncStorage } from 'react-native';
-import Styles from '../styles/styles';
+import React, { Component } from "react";
+import { Platform, StyleSheet, Text, View, Dimensions, TouchableOpacity, SafeAreaView, Animated, Easing } from "react-native";
+import * as Animatable from "react-native-animatable";
 
+const zoomOut = {
+    0: {
+      opacity: 1,
+      scale: 1,
+    },
+    0.5: {
+      opacity: 1,
+      scale: 0.3,
+    },
+    1: {
+      opacity: 0,
+      scale: 0,
+    },
+  };
 
-export default class Demo extends React.Component {
- 
- 
-  
+export default class index extends Component {
+
   render() {
     return (
-      <View style={Styles.containerWhite}>
-         <Image  source={require("../assets/Splash.png")}
-          style={{width:'100%',height:'100%'}}
-          resizeMode='stretch'>
-           </Image>
-      </View>
+      <SafeAreaView style={{flex:1,marginTop:20}}>
+       
+        <View style={{ alignItems: "center" }}>
+          <Animatable.View style={{width:100,height:100,backgroundColor:'red'}} animation="bounceInLeft" iterationCount={3} direction="reverse">
+            <Text style={{color:'white'}}>slideInDown Animation</Text>
+          </Animatable.View>
+        </View>
+
+      </SafeAreaView>
     );
   }
 }

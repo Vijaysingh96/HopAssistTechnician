@@ -67,30 +67,27 @@ export default class Home extends React.Component {
     toggleSwitch1 = (value) => {
 
         if (value == true) {
-
             // Actions.push("NewIntervention")
-            this.NewInterventionRBSheet.open()
+            //this.NewInterventionRBSheet.open()
+            alert(" En ligne avec succès")
             this.setState({
                 switch1Value: value,
             })
             console.log('Switch 1 is: ' + value)
         } else {
             console.log('Switch 1 is: ' + value)
-            this.OfflineRBSheet.open()
+            //this.OfflineRBSheet.open()
+            alert("Offline avec succès")
             this.setState({
                 switch1Value: value,
             })
         }
-
     }
-
     onValueChange(value) {
         this.setState({
             selected: value
         });
     }
-
-
     render() {
         var navigationView = (
             <Sidebar />
@@ -367,15 +364,11 @@ export default class Home extends React.Component {
                                                 <Text style={{ fontSize: 16, color: 'white', fontWeight: 'bold' }}>{Strings.Supprimer_text}</Text>
                                             </TouchableOpacity>
                                         </View>
-
                                     </View>
-
                                 </View>
                                 </ImageBackground>
                             </View>
                         </ServiceDetaileSheet>
-
-
                         <AccceptRBSheet
                             ref={ref => { this.AccceptRBSheet = ref; }}
                             height={500}

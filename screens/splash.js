@@ -26,7 +26,7 @@ export default class Splash extends React.Component {
           console.log("state userId============" + userid);
 
           if (userid != null && userid != "" && userid != undefined) {
-             //Actions.push("Demo")
+             Actions.push("Demo")
           } else {
             Actions.push("ViewPager");
           }

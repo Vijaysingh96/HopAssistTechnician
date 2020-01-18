@@ -17,7 +17,6 @@ export default {
     backgroundColor:'white',
     flexDirection:'column',
   },
- 
   containerBlue:{
     flex:1,
     backgroundColor:'blue'

@@ -38,8 +38,6 @@ export default class Category extends React.Component {
 
 
         });
-
-
     }
 
     render() {

@@ -18,9 +18,102 @@ export default class login extends React.Component {
             showUpdateDialog: false,
             isAuthorized: "1",
             userid: '',
+            email:'',
+            errEmail:'',
+            password:'',
+            passwordErr:'',
 
 
         };
+    }
+
+    componentDidMount(){
+
+        AsyncStorage.getItem("Technician_Id")
+            .then(Technician_Id => {
+
+                if(Technician_Id != null){
+                    console.log("user id :::"+Technician_Id)
+                    var Technician_Id = JSON.parse(Technician_Id);
+                    this.setState({ Technician_Id: Technician_Id });
+                }else{
+                    console.log("user id @:::"+Technician_Id)
+                   AsyncStorage.setItem("Technician_Id","5")
+                }
+               
+            })          
+    }
+
+    validationLogin() {
+        var isValidate = 0;
+        if (this.state.email != "") {
+            isValidate += 1;
+            if (this.validateEmail(this.state.email)) {
+                isValidate += 1;
+            } else {
+                isValidate -= 1;
+                this.setState({
+                    errEmail: "S'il vous plaît entrer email valide",
+                });
+            }
+        } else {
+            console.log("cat empty::::");
+            isValidate -= 1;
+            this.setState({
+                errEmail: Strings.ShouldemptyText,
+            });
+        }
+
+        if (this.state.password != "") {
+            isValidate += 1;
+            if (this.validatePassword(this.state.password)) {
+                isValidate += 1;
+            } else {
+                isValidate -= 1;
+                this.setState({
+                    passwordErr: "La longueur devrait être min 6",
+
+                });
+            }
+        } else {
+            console.log("cat empty::::");
+            isValidate -= 1;
+            this.setState({
+                passwordErr: Strings.ShouldemptyText,
+            });
+        }
+
+        if (isValidate == 4) {
+
+            console.log("Use Login::::" + this.state.email + "==" + this.state.password)
+            this.userLoginApi();
+            this.setState({
+                animating: true,
+                lodingDialog: true,
+
+            });
+        }
+        else {
+            // alert(strings.Pleasefillallthefields)
+        }
+
+    }
+    validateEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+
+    validatePassword(password) {
+        if (password.length < 6) {
+            return false;
+        } else if (password.length > 16) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    userLoginApi(){
+        Actions.push("Home");
     }
     render() {
         return (
@@ -37,18 +130,25 @@ export default class login extends React.Component {
 
                             <View style={{ width: '100%', height: 45, borderWidth: 1, borderColor: Strings.light_color, borderRadius: 10 }}>
                                 <TextInput placeholder={Strings.email_address_text}
+                                onChangeText={(email)=>this.setState({email,errEmail:''})}
                                     style={{ padding: 10 }}>
 
                                 </TextInput>
                             </View>
+                            {!!this.state.errEmail && (
+                                <Text style={{ color: 'red', marginLeft: 10,  fontSize: 12 }}>{this.state.errEmail}</Text>
+                            )}
                             <View style={{ width: '100%', height: 45, marginTop: 20, borderWidth: 1, borderColor: Strings.light_color, borderRadius: 10 }}>
                                 <TextInput placeholder={Strings.password_text}
                                     secureTextEntry={true}
+                                    onChangeText={(password)=>this.setState({password,passwordErr:''})}
                                     style={{ padding: 10 }}>
 
                                 </TextInput>
                             </View>
-
+                            {!!this.state.passwordErr && (
+                                <Text style={{ color: 'red', marginLeft: 10,  fontSize: 12 }}>{this.state.passwordErr}</Text>
+                            )}
                             <TouchableOpacity onPress={() => Actions.push("ExpertsList")}  style={{ width: '100%', flexDirection: 'column', marginTop: 10 }}>
 
                                 <Text style={{fontFamily:'poppins', color: '#01A2C4', textAlign: 'right', marginRight:0, marginTop: 10, fontSize: 14, fontWeight: 'bold' }}>
@@ -59,7 +159,7 @@ export default class login extends React.Component {
 
                         </View>
                         
-                        <TouchableOpacity onPress={()=> Actions.push("Home")} style={{ alignItems: 'center', justifyContent: 'center', width: '90%', height: 50, marginTop: 30, borderRadius: 10, backgroundColor: '#01A2C4' }}>
+                        <TouchableOpacity onPress={()=>this.validationLogin()} style={{ alignItems: 'center', justifyContent: 'center', width: '90%', height: 50, marginTop: 30, borderRadius: 10, backgroundColor: '#01A2C4' }}>
                             <Text style={{ fontSize: 16, color: 'white' }}>{Strings.email_login_text}</Text>
 
                         </TouchableOpacity>

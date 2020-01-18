@@ -13,12 +13,20 @@ import java.util.ArrayList;
 import com.hopassisttechnician.BuildConfig;
 import com.hopassisttechnician.R;
 
+// @react-native-community/geolocation
+import com.reactnativecommunity.geolocation.GeolocationPackage;
 // @react-native-community/viewpager
 import com.reactnativecommunity.viewpager.RNCViewPagerPackage;
+// react-native-google-places
+import com.arttitude360.reactnative.rngoogleplaces.RNGooglePlacesPackage;
 // react-native-image-picker
 import com.imagepicker.ImagePickerPackage;
+// react-native-maps
+import com.airbnb.android.react.maps.MapsPackage;
 // react-native-webview
 import com.reactnativecommunity.webview.RNCWebViewPackage;
+// rn-fetch-blob
+import com.RNFetchBlob.RNFetchBlobPackage;
 
 public class PackageList {
   private Application application;
@@ -52,9 +60,13 @@ public class PackageList {
   public ArrayList<ReactPackage> getPackages() {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(),
+      new GeolocationPackage(),
       new RNCViewPagerPackage(),
+      new RNGooglePlacesPackage(),
       new ImagePickerPackage(),
-      new RNCWebViewPackage()
+      new MapsPackage(),
+      new RNCWebViewPackage(),
+      new RNFetchBlobPackage()
     ));
   }
 }

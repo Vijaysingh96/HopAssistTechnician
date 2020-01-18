@@ -19,6 +19,7 @@ import EditProfile from './screens/EditProfile'
 import Contacts from './screens/Contacts'
 import Notification from './screens/Notification'
 import Category from './screens/Category'
+import Demo from './screens/Demo'
 _backAndroidHandler = () => {
   const scene = Actions.currentScene;
   // alert(scene)
